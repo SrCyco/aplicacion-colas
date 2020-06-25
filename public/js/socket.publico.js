@@ -17,7 +17,7 @@ socket.on('estadoActual', (data) => {
 socket.on('ultimos4', (data) => {
     var audio = new Audio('audio/new-ticket.mp3') 
     audio.play();
-    actualizaHtml(data);
+    actualizaHtml(data.ultimos4);
 });
 
 function actualizaHtml(ultimos4) {
