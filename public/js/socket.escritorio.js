@@ -9,13 +9,10 @@ if (!searchParams.has('escritorio')) {
 var escritorio = searchParams.get('escritorio');
 var label = $('small');
 
-console.log(escritorio);
 $('h1').text('Escritorio ' + escritorio);
 
 $('button').on('click', () => {
-
     socket.emit('atenderTicket', {escritorio: escritorio}, (resp) => {
-        console.log(resp);
         if (resp === 'No hay tickets') {
             alert(resp);
             label.text(resp);

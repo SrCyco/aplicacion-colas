@@ -14,10 +14,7 @@ socket.on('estadoActual', (resp) => {
     label.text(resp.actual);
 });
 
-
-
 $('button').on('click', function() {
-    console.log('click');
     socket.emit('siguienteTicket', null, (siguienteTicket) => {
         label.text(siguienteTicket);
     });
